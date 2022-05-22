@@ -10,11 +10,38 @@
   <body id="myPC">
     <div id="turnOnContainer"></div>
     <div class="container" id="bg">
-      <div class="peripheralContainer" id="peripheralContainer">
-        <div class="peripheral">
-          <div class="peripheralTable">
-            <div class="peripheralBar">
-              <div class="peripheralClose" id="peripheralClose">✖</div>
+      <!-- windows open -->
+      <div class="windowContainer" id="myComputerContainer">
+        <div class="window">
+          <div class="windowTable">
+            <div class="windowBar">
+              <div class="windowClose" id="myComputerClose">✖</div>
+            </div>
+            <div class="myComputerContainer">
+              <div class="myComputerHeader">atas</div>
+              <div class="myComputer">
+                <div>
+                  <img src="assets/img/menu/computer.png" alt="computer" />
+                  <h3>
+                    This PC
+                  </h3>
+                </div>
+                <div>
+                  <img src="assets/img/mycomputer/hdd1.png" alt="computer" />
+                  <p>
+                    30Gb of 300Gb
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="windowContainer" id="peripheralContainer">
+        <div class="window">
+          <div class="windowTable">
+            <div class="windowBar">
+              <div class="windowClose" id="peripheralClose">✖</div>
             </div>
             <table>
               <tr>
@@ -57,17 +84,46 @@
           </div>
         </div>
       </div>
+      <div class="windowContainer" id="hwContainer">
+        <div class="window">
+          <div class="windowTable">
+            <div class="windowBar">
+              <div class="windowClose" id="hwClose">✖</div>
+            </div>
+            <table>
+              <tr>
+                <th>Power Option</th>
+              </tr>
+              <tr>
+                <td>ICA 1400</td>
+              </tr>
+              <tr>
+                <td>APC Stabilizer 700W</td>
+              </tr>
+              <tr>
+                <td>Xiaomi 24inch</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- end-of-windows-open -->
+      <!-- taskbar-menu -->
       <div class="taskbar" id="taskbar">
         <div class="menu" id="menu">
           <div class="accent"></div>
-          <a href="/"><img src="assets/img/settings.png" alt="dxdiag" />dxdiag</a>
-          <a href="/"><img src="assets/img/mobo.png" alt="hw monitor" />HW
+          <a href="#" id="myComputerButton"><img
+              src="assets/img/menu/computer.png" alt="My Computer"
+              />My
+            Computer</a>
+          <a href="#" id="hwButton"><img src="assets/img/menu/mobo.png" alt="hw
+              monitor" />HW
             Monitor</a>
-          <a href="#" id="peripheralButton"><img src="assets/img/keyboard.png"
+          <a href="#" id="peripheralButton"><img
+              src="assets/img/menu/keyboard.png"
               alt="Peripheral" />Peripheral</a>
           <div>_____________________</div>
-          <a href="/"><img src="assets/img/tap.png" alt="Peripheral" />OBS</a>
-          <a href="#" id="shutdown"><img src="assets/img/off.png"
+          <a href="#" id="shutdown"><img src="assets/img/menu/off.png"
               alt="Peripheral" />Shutdown</a>
         </div>
         <div class="toolbar">
@@ -82,6 +138,7 @@
           </div>
         </div>
       </div>
+      <!-- end-of-taskbar-menu -->
     </div>
     <script src="classes/Computer/Main.js" type="module"></script>
     <script src="classes/Computer/Time.js" type="module"></script>

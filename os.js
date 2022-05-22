@@ -24,6 +24,8 @@ const powerOff = () => {
   cuyOS.menu.style.display = "none"
   cuyOS.taskbar.style.display = "none"
   cuyOS.peripheralContainer.style.display = "none"
+  cuyOS.hwContainer.style.display = "none"
+  cuyOS.myComputerContainer.style.display = "none"
 
   //create new html element for turning on pc
   let turnOn = document.createElement("p")
@@ -54,13 +56,36 @@ const powerOn = () => {
   )
 }
 
-//opening peripheral menu
+//opening my computer window menu
+cuyOS.myComputerButton.addEventListener("click", () => {
+  cuyOS.myComputerContainer.style.display = "flex"
+  cuyOS.menu.style.display = "none"
+})
+
+//closing my computer window menu
+cuyOS.myComputerClose.addEventListener("click", () => {
+  cuyOS.myComputerContainer.style.display = "none"
+})
+
+
+//opening peripheral window menu
 cuyOS.peripheralButton.addEventListener("click", () => {
   cuyOS.peripheralContainer.style.display = "flex"
   cuyOS.menu.style.display = "none"
 })
 
-//closing peripheral menu
+//closing peripheral window menu
 cuyOS.peripheralClose.addEventListener("click", () => {
   cuyOS.peripheralContainer.style.display = "none"
+})
+
+//opening hardware window menu
+cuyOS.hwButton.addEventListener("click", () => {
+  cuyOS.hwContainer.style.display = "flex"
+  cuyOS.menu.style.display = "none"
+})
+
+//closing hardware window menu
+cuyOS.hwClose.addEventListener("click", () => {
+  cuyOS.hwContainer.style.display = "none"
 })
