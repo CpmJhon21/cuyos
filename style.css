@@ -3,7 +3,6 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none;
 }
 
 .container {
@@ -84,6 +83,7 @@ html {
   color: slateblue;
   background-color: #d2d2d2;
   z-index: 10;
+  cursor: pointer;
   position: absolute;
 }
 
@@ -189,6 +189,7 @@ html {
   color: black;
   width: 50px;
   height: 30px;
+  cursor: pointer;
 }
 
 .windowClose:hover {
@@ -276,15 +277,4 @@ td {
   padding: 25px;
   margin: 10px;
   width: 50%;
-}
-
-#touchIndicator {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  z-index: 10;
-  pointer-events: none;
-  transition: all 0.15s ease-out;
 }
