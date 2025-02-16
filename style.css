@@ -278,3 +278,32 @@ td {
   margin: 10px;
   width: 50%;
 }
+
+.powerOn {
+  color: white;
+  background: black;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  margin: 100px auto;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px white; }
+  100% { text-shadow: 0 0 20px white; }
+}
+
+.fade-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
