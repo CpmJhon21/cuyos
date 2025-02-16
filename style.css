@@ -246,25 +246,22 @@ td {
 }
 
 .myComputer {
-  display: flex; /* Mengatur elemen dalam satu baris */
-  flex-wrap: wrap; /* Jika ruang tidak cukup, elemen pindah ke bawah */
-  gap: 20px; /* Jarak antar item */
-  justify-content: center; /* Memusatkan elemen */
-  align-items: center; /* Menyamakan tinggi elemen */
+  display: flex;
+  justify-content: flex-start;
 }
 
 .myComputer>div:nth-child(1) {
+  position: relative;
+  width: 200px;
+  height: 35px;
   display: flex;
-  flex-direction: column; /* Susunan vertikal (gambar di atas, teks di bawah) */
-  align-items: center; /* Memastikan teks sejajar dengan gambar */
-  text-align: center; /* Memastikan teks rapi */
-  width: 120px; /* Atur lebar tiap item */
+  background-color: #eaeaea;
 }
 
 .myComputer>div>img {
-  width: 100px; /* Atur ukuran gambar */
-  height: auto; /* Menyesuaikan proporsi */
-  object-fit: contain; /* Mencegah gambar terpotong */
+  margin: 5px;
+  width: 30px;
+  height: 30px;
 }
 
 .myComputer>div:nth-child(1)>h3 {
@@ -277,9 +274,14 @@ td {
 }
 
 .myComputer>div:nth-child(2) {
-  padding: 25px;
-  margin: 10px;
-  width: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+
+.myComputer > div:not(:first-child) > p {
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: bold;
 }
 
 .powerOn {
