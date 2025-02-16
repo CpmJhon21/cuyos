@@ -247,8 +247,7 @@ td {
 
 .myComputer {
   display: flex;
-  flex-direction: column; /* Susun elemen secara vertikal */
-  align-items: flex-start; /* Rata kiri */
+  align-items: center; /* Menyamakan tinggi elemen */
   gap: 10px; /* Jarak antar elemen */
 }
 
@@ -258,9 +257,11 @@ td {
   align-items: center;
   background-color: #eaeaea;
   padding: 5px 10px;
-  width: 220px;
+  width: 200px;
   height: 40px;
   border-radius: 5px;
+  position: relative;
+  flex-shrink: 0; /* Mencegah ukuran berubah */
 }
 
 /* Styling gambar dalam elemen pertama */
@@ -277,11 +278,12 @@ td {
   margin: 0;
 }
 
-/* Wrapper untuk rank agar sejajar dengan CPM_JHON */
+/* Wrapper untuk rank */
 .rankContainer {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px; /* Jarak antar rank */
+  align-items: center; /* Menyamakan posisi vertikal */
+  gap: 5px; /* Jarak antar rank */
+  flex-wrap: wrap; /* Jika layar kecil, rank turun ke bawah */
 }
 
 /* Styling untuk elemen rank */
@@ -290,26 +292,27 @@ td {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 10px;
-  width: 90px;
+  padding: 5px;
+  width: 80px; /* Lebar rank lebih kecil */
   background-color: #f9f9f9;
   border-radius: 5px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* Styling gambar dalam elemen rank */
 .rankContainer > div > img {
-  width: 50px;
-  height: 50px;
+  width: 40px; /* Gambar lebih kecil */
+  height: 40px;
   object-fit: contain;
 }
 
 /* Styling teks dalam elemen rank */
 .rankContainer > div > p {
-  font-size: 12px;
-  margin-top: 5px;
+  font-size: 10px; /* Teks lebih kecil */
+  margin-top: 3px;
   font-weight: bold;
 }
+
 
 .powerOn {
   color: white;
