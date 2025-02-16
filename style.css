@@ -246,22 +246,25 @@ td {
 }
 
 .myComputer {
-  display: flex;
-  justify-content: flex-start;
+  display: flex; /* Mengatur elemen dalam satu baris */
+  flex-wrap: wrap; /* Jika ruang tidak cukup, elemen pindah ke bawah */
+  gap: 20px; /* Jarak antar item */
+  justify-content: center; /* Memusatkan elemen */
+  align-items: center; /* Menyamakan tinggi elemen */
 }
 
 .myComputer>div:nth-child(1) {
-  position: relative;
-  width: 200px;
-  height: 35px;
   display: flex;
-  background-color: #eaeaea;
+  flex-direction: column; /* Susunan vertikal (gambar di atas, teks di bawah) */
+  align-items: center; /* Memastikan teks sejajar dengan gambar */
+  text-align: center; /* Memastikan teks rapi */
+  width: 120px; /* Atur lebar tiap item */
 }
 
 .myComputer>div>img {
-  margin: 5px;
-  width: 30px;
-  height: 30px;
+  width: 100px; /* Atur ukuran gambar */
+  height: auto; /* Menyesuaikan proporsi */
+  object-fit: contain; /* Mencegah gambar terpotong */
 }
 
 .myComputer>div:nth-child(1)>h3 {
