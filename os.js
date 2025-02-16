@@ -17,7 +17,6 @@ cuyOS.shutdown.addEventListener("click", () => powerOff())
 //shutdown function
 const powerOff = () => {
   console.log('pc turned off!')
-  //turning off the clock first
   cuyOSTime.stop()
 
   cuyOS.container.style.background = "black"
@@ -27,20 +26,15 @@ const powerOff = () => {
   cuyOS.hwContainer.style.display = "none"
   cuyOS.myComputerContainer.style.display = "none"
 
-  //create new html element for turning on pc
+  // Create Power On button
   let turnOn = document.createElement("p")
   turnOn.innerHTML = "Power On"
-  turnOn.style.color = "white"
-  turnOn.style.background = "black"
-  turnOn.style.textAlign = "center"
-  turnOn.style.fontSize = "30px"
-  turnOn.style.cursor = "pointer"
   turnOn.id = "powerOn"
 
-  //put this new element to the parent element
+  // Append to container
   cuyOS.turnOnContainer.appendChild(turnOn)
 
-  //initiating state for turning on PC
+  // Initialize power on function
   powerOn()
 }
 
@@ -49,11 +43,20 @@ const powerOn = () => {
   console.log('pc ready to use again')
   document.getElementById("powerOn").addEventListener("click", () => {
     console.log('this pc will start soon')
+
+    // Tambahkan efek fade-in sebelum reload
+    let fadeScreen = document.createElement("div")
+    fadeScreen.className = "fade-screen"
+    document.body.appendChild(fadeScreen)
+
+    setTimeout(() => {
+      fadeScreen.style.opacity = "1"
+    }, 100) // Mulai efek fade-in
+
     setTimeout(() => {
       location.reload()
-    }, 1000)
-  }
-  )
+    }, 1500) // Reload setelah animasi selesai
+  })
 }
 
 //opening my computer window menu
