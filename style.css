@@ -247,75 +247,69 @@ td {
 
 .myComputer {
   display: flex;
-  flex-direction: column; /* Susun elemen ke bawah */
+  flex-direction: column; /* Susun elemen secara vertikal */
   align-items: flex-start; /* Rata kiri */
-  gap: 10px;
-  padding: 10px;
+  gap: 10px; /* Jarak antar elemen */
 }
 
-/* Styling untuk bagian CPM_JHON */
+/* Styling untuk elemen pertama (CPM_JHON) */
 .myComputer > div:first-child {
   display: flex;
   align-items: center;
   background-color: #eaeaea;
-  padding: 8px 12px;
+  padding: 5px 10px;
   width: 220px;
   height: 40px;
   border-radius: 5px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  position: relative;
 }
 
-/* Styling gambar CPM_JHON */
+/* Styling gambar dalam elemen pertama */
 .myComputer > div:first-child > img {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
 }
 
-/* Styling teks CPM_JHON */
+/* Styling teks dalam elemen pertama */
 .myComputer > div:first-child > h3 {
   font-size: 16px;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   margin: 0;
 }
 
-/* Container untuk Rank */
+/* Wrapper untuk rank agar sejajar dengan CPM_JHON */
 .rankContainer {
   display: flex;
-  justify-content: flex-start; /* Sejajar ke kiri */
-  gap: 10px;
-  margin-left: 10px; /* Geser sedikit ke kanan */
+  flex-wrap: wrap;
+  gap: 10px; /* Jarak antar rank */
 }
 
-/* Styling setiap rank */
+/* Styling untuk elemen rank */
 .rankContainer > div {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 8px;
+  padding: 10px;
   width: 90px;
   background-color: #f9f9f9;
   border-radius: 5px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling gambar dalam Rank */
+/* Styling gambar dalam elemen rank */
 .rankContainer > div > img {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
 }
 
-/* Styling teks dalam Rank */
+/* Styling teks dalam elemen rank */
 .rankContainer > div > p {
   font-size: 12px;
   margin-top: 5px;
   font-weight: bold;
-  color: #333;
 }
-
 
 .powerOn {
   color: white;
