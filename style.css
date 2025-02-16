@@ -247,42 +247,75 @@ td {
 
 .myComputer {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column; /* Susun elemen ke bawah */
+  align-items: flex-start; /* Rata kiri */
+  gap: 10px;
+  padding: 10px;
 }
 
-.myComputer>div:nth-child(1) {
-  position: relative;
-  width: 200px;
-  height: 35px;
+/* Styling untuk bagian CPM_JHON */
+.myComputer > div:first-child {
   display: flex;
+  align-items: center;
   background-color: #eaeaea;
+  padding: 8px 12px;
+  width: 220px;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-.myComputer>div>img {
-  margin: 5px;
-  width: 30px;
-  height: 30px;
+/* Styling gambar CPM_JHON */
+.myComputer > div:first-child > img {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
 }
 
-.myComputer>div:nth-child(1)>h3 {
-  margin: 5px;
-  position: absolute;
-  top: 3px;
-  left: 40px;
+/* Styling teks CPM_JHON */
+.myComputer > div:first-child > h3 {
   font-size: 16px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  margin: 0;
 }
 
-.myComputer>div:nth-child(2) {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
+/* Container untuk Rank */
+.rankContainer {
+  display: flex;
+  justify-content: flex-start; /* Sejajar ke kiri */
+  gap: 10px;
+  margin-left: 10px; /* Geser sedikit ke kanan */
+}
 
-.myComputer > div:not(:first-child) > p {
+/* Styling setiap rank */
+.rankContainer > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 8px;
+  width: 90px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling gambar dalam Rank */
+.rankContainer > div > img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* Styling teks dalam Rank */
+.rankContainer > div > p {
   font-size: 12px;
   margin-top: 5px;
   font-weight: bold;
+  color: #333;
 }
+
 
 .powerOn {
   color: white;
