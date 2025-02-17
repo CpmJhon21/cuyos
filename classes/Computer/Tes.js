@@ -1,8 +1,12 @@
-function toggleOption(id) {
-  let element = document.getElementById(id);
-  if (element.style.display === "none" || element.style.display === "") {
-    element.style.display = "table-row";  // Menampilkan opsi
+function toggleOption(optionId, arrowId) {
+  let option = document.getElementById(optionId);
+  let arrow = document.getElementById(arrowId);
+
+  if (option.style.display === "none" || option.style.display === "") {
+    option.style.display = "table-row";  // Menampilkan opsi
+    arrow.innerHTML = "▲";  // Mengubah ikon jadi ▲
   } else {
-    element.style.display = "none";  // Menyembunyikan opsi
+    option.style.display = "none";  // Menyembunyikan opsi
+    arrow.innerHTML = "▼";  // Mengubah ikon jadi ▼
   }
 }
