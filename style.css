@@ -313,32 +313,32 @@ td {
   font-weight: bold;
 }
 
+.hidden {
+  display: none;
+}
 
-.powerOn {
-  color: white;
-  background: black;
-  text-align: center;
-  font-size: 30px;
+.option {
   cursor: pointer;
-  padding: 20px;
-  border-radius: 10px;
-  width: 200px;
-  margin: 100px auto;
-  animation: glow 1.5s infinite alternate;
+  font-weight: bold;
 }
 
-@keyframes glow {
-  0% { text-shadow: 0 0 5px white; }
-  100% { text-shadow: 0 0 20px white; }
+.option:hover {
+  background-color: #f0f0f0;
 }
 
-.fade-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul li a:hover {
+  color: #007bff;
 }
